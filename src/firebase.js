@@ -12,6 +12,26 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const analytics = getAnalytics(app);
+let app;
+let db;
+let analytics = null;
+
+try {
+  app = initializeApp(firebaseConfig);
+  db = getFirestore(app);
+
+  // Analytics only works in browser environment and requires valid config
+  if (typeof window !== 'undefined' && firebaseConfig.measurementId) {
+    try {
+      analytics = getAnalytics(app);
+    } catch (analyticsError) {
+      console.warn('Firebase Analytics initialization failed:', analyticsError.message);
+    }
+  }
+} catch (error) {
+  console.error('Firebase initialization failed:', error.message);
+  // Create a mock db object to prevent crashes
+  db = null;
+}
+
+export { db, analytics };

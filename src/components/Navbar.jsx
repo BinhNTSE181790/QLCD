@@ -41,11 +41,12 @@ const Navbar = () => {
     { path: '/luat', label: 'Pháp luật' },
     // { path: '/quiz', label: 'Kiểm tra' },
     { path: '/hoi-dap', label: 'Hỏi đáp' },
+    { path: '/xay-dung-dang', label: 'Xây dựng Đảng' },
     { path: '/liem-chinh', label: 'Liêm chính' },
   ];
 
-  const navBgClass = isScrolled 
-    ? 'bg-white/95 shadow-lg' 
+  const navBgClass = isScrolled
+    ? 'bg-white/95 shadow-lg'
     : 'bg-white/80';
 
   const getNavItemClass = (path) => {
@@ -66,7 +67,7 @@ const Navbar = () => {
           >
             PCTN
           </button>
-          
+
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <Link

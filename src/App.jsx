@@ -9,6 +9,7 @@ import DemoPage from './pages/DemoPage';
 import OverviewPage from './pages/OverviewPage';
 import LiemChinhPage from './pages/LiemChinhPage';
 import HoiDapPage from './pages/HoiDapPage';
+import XayDungDangPage from './pages/XayDungDangPage';
 
 function AppContent() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function AppContent() {
           <Route path="/demo" element={<DemoPage />} />
           <Route path="/liem-chinh" element={<LiemChinhPage />} />
           <Route path="/hoi-dap" element={<HoiDapPage />} />
+          <Route path="/xay-dung-dang" element={<XayDungDangPage />} />
         </Routes>
       </main>
     </div>
