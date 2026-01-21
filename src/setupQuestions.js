@@ -3,13 +3,13 @@ import { getFirestore, collection, addDoc, getDocs, deleteDoc } from 'firebase/f
 
 // Config Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDFbdmfFNjKZg4KtBdok4iiIi4hBrWrlaU",
-  authDomain: "pctn-ef046.firebaseapp.com",
-  projectId: "pctn-ef046",
-  storageBucket: "pctn-ef046.firebasestorage.app",
-  messagingSenderId: "697151927982",
-  appId: "1:697151927982:web:f7024e2ede625e5b269f3f",
-  measurementId: "G-FQXB9GKELC"
+  apiKey: "AIzaSyA_Dd5gdvbKCpycmzKvJBzAA-2P6UDCZv4",
+  authDomain: "spst-feb44.firebaseapp.com",
+  projectId: "spst-feb44",
+  storageBucket: "spst-feb44.firebasestorage.app",
+  messagingSenderId: "829442510190",
+  appId: "1:829442510190:web:17fc806d5b87fae616457f",
+  measurementId: "G-SJL3LYK16V",
 };
 
 const app = initializeApp(firebaseConfig);

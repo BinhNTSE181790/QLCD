@@ -1,0 +1,36 @@
+======== Content =============
+Session1: Chỉnh đốn Đảng
+<1.1> Chỉnh đốn Đảng là nhiệm vụ then chốt để đảm bảo vai trò lãnh đạo và giữ vững bản chất cách mạng.
+<1.2> Xây dựng Đảng thực sự trong sạch, vững mạnh
+<1.3> Thường xuyên chỉnh đốn nội bộ
+  <1.3.1> Phải đề ra đường lối, chủ trương đúng đắn
+  <1.3.2> Phải tổ chức, thực hiện thật tốt các đường lối, chủ trương của Đảng
+<1.4> Nêu cao trách nhiệm gương mẫu
+<1.5> Tăng cường công tác kiểm tra, giám sát
+
+Session2: Kiểm soát quyền lực Nhà nước
+<2.1> Kiểm soát quyền lực
+<2.2> Tính tất yếu của việc kiểm soát
+<2.3> Cơ chế kiểm soát đa diện:
+  <2.3.1> Phát huy vai trò lãnh đạo của Đảng
+  <2.3.2> Kiểm soát từ bên trong bộ máy
+  <2.3.3> Sử dụng Pháp luật làm công cụ
+
+Session3: Huy động nhân dân tham gia giám sát
+<3.1> Nhân dân là chủ thể tối cao của quyền lực
+  <3.1.1> Xác lập vị thế “Dân là chủ”
+  <3.1.2> Hình thức giám sát
+     <3.1.2.1> dân chủ trực tiếp
+     <3.1.2.2> dân chủ gián tiếp
+  <3.1.3>Nâng cao năng lực làm chủ của dân
+
+Session4: Đấu tranh chống tiêu cực để củng cố niềm tin
+<4.1> tẩy trừ các "căn bệnh" gây mất lòng dân
+  <4.1.1> Tẩy trừ "giặc nội xâm"
+  <4.1.2> Chống đặc quyền, đặc lợi
+  <4.1.3> Lấy dân làm gốc
+
+========== Requirement of session ===============
+Session1
+thực hiện theo dạng thẻ lật, thẻ có 2 mặt, 1 mặt úp là toàn bộ màu đỏ nhạt, 1 mặt chứa nội dung cần hiển thị. đầu tiên, trên component session1 chỉ hiện 1 thẻ (thẻ 1) chứa <1.1>, sau khi lật thẻ chứa <1.1>, thẻ chứa <1.2> (thẻ 2) xuất hiện từ dưới lên, xếp phía dưới thẻ 1. khi thẻ 2 được lật, 3 thẻ chứa <1.3> (thẻ 3), <1.4> (thẻ 4), <1.5> (thẻ 5) xuất hiện phía dưới thẻ 2, tương tự lúc thẻ 2 xuất hiện sau khi lật thẻ 1. khi lật thẻ 3, xuất hiện thêm 2 thẻ <1.3.1> (thẻ 6) và <1.3.2> (thẻ 7) nằm dưới thẻ 3.
+
