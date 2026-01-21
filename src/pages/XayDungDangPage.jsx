@@ -38,7 +38,7 @@ const XayDungDangPage = () => {
 
                 <div className="mt-6 p-4 bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl border-l-4 border-red-500">
                     <p className="text-sm text-gray-600 italic">
-                        <strong>Nguồn:</strong> Giáo trình học phần Tư tưởng Hồ Chí Minh, tr.80–83; tr.90–91
+                        <strong>Nguồn:</strong> Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.80–83; tr.90–91
                     </p>
                 </div>
             </div>
@@ -65,7 +65,7 @@ const XayDungDangPage = () => {
                         Đường lối, chủ trương đúng là yếu tố quyết định. Giáo trình nêu rõ: <strong className="text-red-600">"sai một ly có thể đi một dặm"</strong>; do đó đường lối phải dựa trên nền tảng lý luận <em>Mác – Lênin</em> và <em>tư tưởng Hồ Chí Minh</em>, đồng thời phù hợp hoàn cảnh đất nước từng giai đoạn, thời kỳ.
                     </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.90</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.90</p>
             </div>
 
             {/* 2. Tổ chức thực hiện */}
@@ -81,7 +81,7 @@ const XayDungDangPage = () => {
                         Không chỉ đúng về chủ trương, Đảng phải tổ chức thực hiện thật tốt; thể chế hóa và biến thành hành động tích cực của các tổ chức trong hệ thống chính trị. Giáo trình đặc biệt nhấn mạnh vai trò <strong className="text-red-600">đội ngũ cán bộ</strong>, nhất là cán bộ chiến lược và người đứng đầu; người đứng đầu phải <strong>nêu cao trách nhiệm, làm gương</strong> để mọi người noi theo.
                     </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.90</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.90</p>
             </div>
 
             {/* 3. Chỉnh đốn Đảng */}
@@ -100,7 +100,7 @@ const XayDungDangPage = () => {
                         Đồng thời, cái thiếu nhất hiện nay là <strong className="text-red-600">sự thống nhất giữa nói và làm</strong>; cần quán triệt sâu sắc tư tưởng Hồ Chí Minh về "nói đi đôi với làm", tăng cường kiểm tra, giám sát để Đảng sử dụng và phát huy tốt quyền lực nhân dân giao phó.
                     </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.90</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.90</p>
             </div>
 
             {/* 4. Ví dụ minh họa */}
@@ -119,7 +119,7 @@ const XayDungDangPage = () => {
                         Ví dụ này cho thấy vai trò <strong>nêu gương, giáo dục và động viên con người</strong> - yếu tố quan trọng để xây dựng đội ngũ và củng cố tổ chức.
                     </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.91</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.91</p>
             </div>
         </div>
     );
@@ -156,7 +156,7 @@ const XayDungDangPage = () => {
                         </p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.80–81; Hồ Chí Minh, Toàn tập, t.4, tr.64–65</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.80–81; Hồ Chí Minh, Toàn tập, t.4, tr.64–65</p>
             </div>
 
             {/* Nhà nước do nhân dân */}
@@ -184,7 +184,7 @@ const XayDungDangPage = () => {
                         </p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.82</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.82</p>
             </div>
 
             {/* Nhà nước vì nhân dân */}
@@ -218,7 +218,7 @@ const XayDungDangPage = () => {
                         </p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.83</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.83</p>
             </div>
         </div>
     );
@@ -245,7 +245,7 @@ const XayDungDangPage = () => {
                         Giáo trình nhấn mạnh: trong <strong className="text-red-600">pháp quyền nhân nghĩa</strong>, pháp luật có tính nhân văn, khuyến thiện; khi xây dựng và thi hành pháp luật phải dựa trên nền tảng <strong>đạo đức xã hội</strong> và các giá trị đạo đức thấm sâu vào quy định pháp luật - pháp luật phải là <strong className="text-red-600">"pháp luật vì con người"</strong>.
                     </p>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.86</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.86</p>
             </div>
 
             {/* Kiểm soát quyền lực */}
@@ -270,7 +270,7 @@ const XayDungDangPage = () => {
                         </p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình, tr.86; Hồ Chí Minh, Toàn tập, t.6, tr.437</p>
+                <p className="text-sm text-gray-500 mt-3 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.86; Hồ Chí Minh, Toàn tập, t.6, tr.437</p>
             </div>
         </div>
     );
@@ -327,7 +327,7 @@ const XayDungDangPage = () => {
                         </div>
                     ))}
                 </div>
-                <p className="text-sm text-gray-500 mt-4 italic">Nguồn: Giáo trình, tr.91</p>
+                <p className="text-sm text-gray-500 mt-4 italic">Nguồn: Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), tr.91</p>
             </div>
         </div>
     );
@@ -377,7 +377,7 @@ const XayDungDangPage = () => {
                 <ol className="space-y-2 text-gray-600 text-sm">
                     <li className="flex items-start gap-2">
                         <span className="font-bold text-red-600">1.</span>
-                        <span>Giáo trình học phần Tư tưởng Hồ Chí Minh (bản PDF do người học cung cấp), các trang 80-83, 86, 90-91.</span>
+                        <span>Giáo trình Tư tưởng Hồ Chí Minh (NXB Chính trị quốc gia Sự thật, 2019), các trang 80-83, 86, 90-91.</span>
                     </li>
                     <li className="flex items-start gap-2">
                         <span className="font-bold text-red-600">2.</span>
