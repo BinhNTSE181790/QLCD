@@ -1058,7 +1058,7 @@ const ThamNhungPage = () => {
                setShowWarning(false);
                setCorruptionLevel(0);
              }}>
-          <div className="warning-modal bg-gradient-to-br from-red-900 via-red-800 to-red-900 rounded-3xl p-12 max-w-3xl border-4 border-red-500 shadow-2xl"
+          <div className="warning-modal bg-gradient-to-br from-red-900 via-red-800 to-red-900 rounded-3xl p-12 max-w-3xl border-4 border-red-500 shadow-2xl max-h-[80vh] overflow-y-auto"
                onClick={(e) => e.stopPropagation()}>
             <div className="text-center">
               <svg className="w-32 h-32 text-red-500 mx-auto mb-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
