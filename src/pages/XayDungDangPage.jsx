@@ -5,7 +5,7 @@ const XayDungDangPage = () => {
 
     const tabs = [
         { id: 'intro', label: 'Mở bài' },
-        // { id: 'party', label: 'Xây dựng Đảng' },
+        { id: 'party', label: 'Xây dựng Đảng' },
         { id: 'state', label: 'Nhà nước của dân' },
         { id: 'lawState', label: 'Nhà nước pháp quyền' },
         { id: 'application', label: 'Vận dụng' },
