@@ -11,6 +11,8 @@ import LiemChinhPage from './pages/LiemChinhPage';
 import HoiDapPage from './pages/HoiDapPage';
 import XayDungDangPage from './pages/XayDungDangPage';
 import YeuCauPage from './pages/YeuCauPage';
+import ThamNhungPage from './pages/ThamNhungPage';
+import SoiDayPage from './pages/SoiDayPage';
 
 function AppContent() {
   const location = useLocation();
@@ -18,13 +20,15 @@ function AppContent() {
   const isAdmin = location.pathname === '/admin';
   const isQuiz = location.pathname === '/quiz';
   const isOverview = location.pathname === '/';
+  const isThamNhung = location.pathname === '/tham-nhung';
+  const isSoiDay = location.pathname === '/soi-day';
 
   // Pages that need red background under navbar (except overview which has full hero)
-  const needsRedBg = !isDemo && !isAdmin && !isQuiz && !isOverview;
+  const needsRedBg = !isDemo && !isAdmin && !isQuiz && !isOverview && !isThamNhung && !isSoiDay;
   const bgClass = needsRedBg ? 'bg-gradient-to-r from-red-600 via-red-700 to-red-800' : 'bg-gray-50';
 
   // Overview page doesn't need top padding (hero goes to top)
-  const needsPadding = !isDemo && !isAdmin && !isOverview;
+  const needsPadding = !isDemo && !isAdmin && !isOverview && !isThamNhung && !isSoiDay;
 
   return (
     <div className={`min-h-screen ${bgClass}`}>
@@ -41,6 +45,8 @@ function AppContent() {
           <Route path="/hoi-dap" element={<HoiDapPage />} />
           <Route path="/xay-dung-dang" element={<XayDungDangPage />} />
           <Route path="/yeu-cau" element={<YeuCauPage />} />
+          <Route path="/tham-nhung" element={<ThamNhungPage />} />
+          <Route path="/soi-day" element={<SoiDayPage />} />
         </Routes>
       </main>
     </div>
