@@ -462,10 +462,6 @@ const ThamNhungPage = () => {
               <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform transition-all duration-500 group-hover:scale-105">
               </div>
             </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute top-10 left-10 w-20 h-20 border-4 border-yellow-500/30 rounded-full"></div>
-            <div className="absolute bottom-10 right-10 w-32 h-32 border-4 border-red-500/20 rounded-full"></div>
           </div>
 
           {/* Right Side - Corrupt Official */}
@@ -551,13 +547,6 @@ const ThamNhungPage = () => {
                 Nguồn: Báo Dân trí
               </a>
             </div>
-
-         
-
-
-            {/* Decorative Elements */}
-            <div className="absolute top-10 right-10 w-20 h-20 border-4 border-red-600/40 rounded-full"></div>
-            <div className="absolute bottom-10 left-10 w-32 h-32 border-4 border-orange-500/30 rounded-full"></div>
           </div>
         </div>
 

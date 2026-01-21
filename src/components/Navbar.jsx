@@ -67,7 +67,7 @@ const Navbar = () => {
             className="text-2xl font-bold text-red-600 transition-colors duration-200 cursor-pointer hover:text-red-700"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            PCTN
+            Quyền lực và cám dỗ
           </button>
 
           <div className="hidden md:flex items-center gap-1">
