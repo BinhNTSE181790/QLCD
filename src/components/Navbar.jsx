@@ -42,6 +42,7 @@ const Navbar = () => {
     // { path: '/quiz', label: 'Kiểm tra' },
     // { path: '/hoi-dap', label: 'Hỏi đáp' },
     { path: '/xay-dung-dang', label: 'Xây dựng Đảng' },
+    { path: '/tham-nhung', label: 'Tham nhũng' },
     { path: '/yeu-cau', label: 'Yêu cầu' },
     { path: '/liem-chinh', label: 'Liêm chính' },
   ];
