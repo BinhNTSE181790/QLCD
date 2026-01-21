@@ -37,11 +37,12 @@ const Navbar = () => {
 
   const navItems = [
     { path: '/', label: 'Tổng quan' },
-    { path: '/news', label: 'Tin tức' },
-    { path: '/luat', label: 'Pháp luật' },
+    // { path: '/news', label: 'Tin tức' },
+    // { path: '/luat', label: 'Pháp luật' },
     // { path: '/quiz', label: 'Kiểm tra' },
-    { path: '/hoi-dap', label: 'Hỏi đáp' },
+    // { path: '/hoi-dap', label: 'Hỏi đáp' },
     { path: '/xay-dung-dang', label: 'Xây dựng Đảng' },
+    { path: '/yeu-cau', label: 'Yêu cầu' },
     { path: '/liem-chinh', label: 'Liêm chính' },
   ];
 
