@@ -17,99 +17,99 @@ const db = getFirestore(app);
 const questions = [
   {
     id: 'hcm_q1',
-    question: 'Theo tài liệu, sự "mục nát", "suy tàn" của chế độ xã hội cũ được biểu hiện trước hết ở yếu tố nào?',
+    question: 'Một địa phương ban hành chính sách mới và tổ chức lấy ý kiến nhân dân rộng rãi; đồng thời khẳng định mọi quyền lực nhà nước thuộc về nhân dân, Nhà nước chỉ là bộ máy thay mặt dân thực thi quyền lực. Nội dung này thể hiện rõ nhất yếu tố nào?',
     options: [
-      'Sự yếu kém trong điều hành, quản lý xã hội của nhà nước',
-      'Sự tha hoá đạo đức, lối sống hưởng lạc của quan chức',
-      'Sự phát triển mạnh mẽ của các thế lực chống đối',
-      'Sự khủng hoảng kinh tế và cạn kiệt tài nguyên'
+      'Nhà nước của dân',
+      'Nhà nước do dân',
+      'Nhà nước vì dân',
+      'Nhà nước pháp quyền'
     ],
-    correctAnswer: 'Sự tha hoá đạo đức, lối sống hưởng lạc của quan chức',
-    explanation: 'Sự "mục nát", "suy tàn" được biểu hiện trước hết bằng sự tha hoá đạo đức, lối sống hưởng lạc, vô trách nhiệm, thiếu kỷ cương, nhũng nhiễu nhân dân của tầng lớp quan chức.'
+    correctAnswer: 'Nhà nước của dân',
+    explanation: 'Nhấn mạnh chủ thể quyền lực là nhân dân; Nhà nước chỉ là bộ máy thay mặt dân thực thi quyền lực nên thuộc về dân.'
   },
   {
     id: 'hcm_q2',
-    question: 'Chủ tịch Hồ Chí Minh đã so sánh mức độ nguy hiểm của tham ô, lãng phí, quan liêu với loại kẻ thù nào?',
+    question: 'Một tỉnh tổ chức bầu cử đại biểu theo đúng trình tự pháp luật; nhân dân trực tiếp bỏ phiếu lựa chọn người đại diện vào cơ quan quyền lực nhà nước. Tình huống này thể hiện đúng nhất ý nghĩa nào?',
     options: [
-      'Kẻ thù ngoại xâm có vũ khí hiện đại',
-      'Giặc đói và giặc dốt',
-      'Kẻ thù không mang gươm súng nhưng nằm ngay trong tổ chức',
-      'Các thế lực phản động lưu vong'
+      'Nhà nước của dân',
+      'Nhà nước do dân',
+      'Nhà nước vì dân',
+      'Nhà nước trong sạch, vững mạnh'
     ],
-    correctAnswer: 'Kẻ thù không mang gươm súng nhưng nằm ngay trong tổ chức',
-    explanation: 'Bác Hồ nói kẻ thù này khá nguy hiểm vì nó không mang gươm mang súng mà nằm trong tổ chức của ta để làm hỏng công việc của ta.'
+    correctAnswer: 'Nhà nước do dân',
+    explanation: 'Thể hiện nguồn gốc quyền lực nhà nước do nhân dân trao thông qua bầu cử, dân trực tiếp lựa chọn người đại diện.'
   },
   {
     id: 'hcm_q3',
-    question: 'Nghị quyết số 14 ngày 15/5/1996 của Bộ Chính trị nhận định tham nhũng gây ra hậu quả chính trị nghiêm trọng nhất là gì?',
+    question: 'Một cơ quan hành chính rà soát thủ tục, cắt giảm giấy tờ rườm rà, xử lý nghiêm nhũng nhiễu “bôi trơn”, đặt mục tiêu phục vụ người dân là ưu tiên số 1. Điều này phản ánh đúng nhất nội dung nào?',
     options: [
-      'Làm chậm quá trình công nghiệp hóa, hiện đại hóa',
-      'Uy hiếp sự tồn vong của chế độ',
-      'Làm suy giảm uy tín của Việt Nam trên trường quốc tế',
-      'Gây thất thoát lớn ngân sách quốc gia'
+      'Nhà nước của dân',
+      'Nhà nước do dân',
+      'Nhà nước vì dân',
+      'Dân chủ gián tiếp'
     ],
-    correctAnswer: 'Uy hiếp sự tồn vong của chế độ',
-    explanation: 'Nghị quyết nhận định tham nhũng làm xói mòn bản chất Đảng và Nhà nước, tiếp tay cho thế lực thù địch, uy hiếp sự tồn vong của chế độ.'
+    correctAnswer: 'Nhà nước vì dân',
+    explanation: 'Phản ánh mục tiêu hoạt động của Nhà nước là phục vụ lợi ích nhân dân, lấy sự hài lòng của dân làm tiêu chí.'
   },
   {
     id: 'hcm_q4',
-    question: 'Chiến lược quốc gia phòng, chống tham nhũng đến năm 2020 xác định tham nhũng là "vật cản lớn" cho yếu tố nào?',
+    question: 'Phát biểu nào dưới đây phân biệt đúng “dân là chủ” và “dân làm chủ”?',
     options: [
-      'Thành công của công cuộc đổi mới',
-      'Sự hội nhập kinh tế quốc tế',
-      'Quá trình cải cách hành chính',
-      'Sự nghiệp giáo dục và đào tạo'
+      '“Dân là chủ” nói về nghĩa vụ; “dân làm chủ” nói về quyền lực tối cao',
+      '“Dân là chủ” nói về vị thế chủ thể tối cao của nhân dân; “dân làm chủ” nhấn mạnh quyền và nghĩa vụ tham gia quản lý xã hội, thực hiện trách nhiệm công dân',
+      '“Dân là chủ” chỉ tồn tại trong dân chủ trực tiếp; “dân làm chủ” chỉ tồn tại trong dân chủ gián tiếp',
+      'Hai khái niệm hoàn toàn giống nhau, không có khác biệt'
     ],
-    correctAnswer: 'Thành công của công cuộc đổi mới',
-    explanation: 'Chính phủ nhận định tham nhũng trở thành vật cản lớn cho thành công của công cuộc đổi mới, cho sức chiến đấu của Đảng.'
+    correctAnswer: '“Dân là chủ” nói về vị thế chủ thể tối cao của nhân dân; “dân làm chủ” nhấn mạnh quyền và nghĩa vụ tham gia quản lý xã hội, thực hiện trách nhiệm công dân',
+    explanation: '“Dân là chủ” khẳng định vị thế quyền lực tối cao của nhân dân; “dân làm chủ” nhấn mạnh việc thực hiện quyền và trách nhiệm đó trong thực tiễn.'
   },
   {
     id: 'hcm_q5',
-    question: 'Theo tài liệu, tham nhũng ảnh hưởng đến người dân về mặt kinh tế thông qua cơ chế nào?',
+    question: 'Một cán bộ nói: “Chúng tôi là cơ quan nhà nước nên có quyền quyết định, dân phải chấp hành vô điều kiện; không cần giải trình.” Theo tư tưởng “quyền lực là thừa ủy quyền của nhân dân”, nhận định phù hợp nhất là:',
     options: [
-      'Người dân phải đóng thuế thu nhập cao hơn',
-      'Giá cả hàng hoá, dịch vụ bị cộng thêm các khoản "tiêu cực phí"',
-      'Lãi suất ngân hàng tăng cao do lạm phát',
-      'Cắt giảm các phúc lợi xã hội công cộng'
+      'Đúng vì quyền lực nhà nước tự thân đã có sẵn',
+      'Đúng vì dân chỉ có quyền bầu, không có quyền giám sát',
+      'Sai vì cán bộ/cơ quan nhà nước là công bộc; quyền lực do dân ủy thác nên phải chịu giám sát, giải trình',
+      'Sai vì nhà nước không cần quyền lực'
     ],
-    correctAnswer: 'Giá cả hàng hoá, dịch vụ bị cộng thêm các khoản "tiêu cực phí"',
-    explanation: 'Người dân thiệt hại vì phải trả thêm tiền khi mua hàng hoá, dịch vụ do giá cả đã được cộng thêm các khoản chi phí, "tiêu cực phí" của nhà sản xuất.'
+    correctAnswer: 'Sai vì cán bộ/cơ quan nhà nước là công bộc; quyền lực do dân ủy thác nên phải chịu giám sát, giải trình',
+    explanation: 'Cơ quan nhà nước là công bộc của dân, quyền lực do dân ủy thác nên phải chịu giám sát và giải trình.'
   },
   {
     id: 'hcm_q6',
-    question: 'Cụm từ nào sau đây được tài liệu liệt kê là biểu hiện của việc các giá trị đạo đức truyền thống bị xâm hại?',
+    question: 'Một cơ quan vừa soạn quy định, vừa tự kiểm tra việc thực hiện, vừa tự xử lý vi phạm mà không có cơ chế giám sát độc lập. Nguy cơ lớn nhất cần cảnh báo là gì?',
     options: [
-      'Tư duy nhiệm kỳ',
-      'Văn hoá phong bì',
-      'Lợi ích nhóm',
-      'Sân sau'
+      'Tăng hiệu quả nên không có nguy cơ',
+      'Dễ dẫn đến lạm quyền, tùy tiện, “vừa đá bóng vừa thổi còi”',
+      'Chỉ làm chậm tiến độ công việc, không liên quan quyền lực',
+      'Chỉ gây thiếu nhân lực'
     ],
-    correctAnswer: 'Văn hoá phong bì',
-    explanation: 'Tài liệu liệt kê các cụm từ như "văn hoá phong bì", "chạy dự án", "chạy chức", "chạy tội" đã không còn xa lạ.'
+    correctAnswer: 'Dễ dẫn đến lạm quyền, tùy tiện, “vừa đá bóng vừa thổi còi”',
+    explanation: 'Khi tập trung cả ban hành - thực thi - kiểm tra, rất dễ dẫn đến lạm quyền, tùy tiện, thiếu khách quan.'
   },
   {
     id: 'hcm_q7',
-    question: 'Theo tài liệu, nguyên nhân chủ yếu khiến người dân cảm thấy bất lực, không muốn đấu tranh với tham nhũng là gì?',
+    question: 'Phương án nào thể hiện đúng tinh thần phân công, phối hợp và kiểm soát quyền lực giữa lập pháp - hành pháp - tư pháp?',
     options: [
-      'Sự trả thù tàn bạo của kẻ tham nhũng',
-      'Sự yếu kém trong quản lý và chỉ đạo của cơ quan nhà nước',
-      'Thiếu cơ chế bảo vệ người tố cáo',
-      'Người dân thiếu kiến thức pháp luật'
+      'Lập pháp ban hành luật; hành pháp tổ chức thi hành; tư pháp xét xử độc lập theo pháp luật; đồng thời có cơ chế giám sát và trách nhiệm giải trình giữa các cơ quan',
+      'Hành pháp ban hành luật để tiện điều hành; lập pháp chỉ góp ý; tư pháp phụ thuộc hành pháp để thống nhất chỉ đạo',
+      'Tư pháp lãnh đạo lập pháp và hành pháp để tránh xung đột',
+      'Một cơ quan nắm toàn bộ 3 quyền để quyết định nhanh'
     ],
-    correctAnswer: 'Sự yếu kém trong quản lý và chỉ đạo của cơ quan nhà nước',
-    explanation: 'Nguyên nhân chủ yếu là sự yếu kém trong quản lý, điều hành xã hội, chỉ đạo, triển khai cuộc đấu tranh chống tham nhũng của cơ quan có thẩm quyền.'
+    correctAnswer: 'Lập pháp ban hành luật; hành pháp tổ chức thi hành; tư pháp xét xử độc lập theo pháp luật; đồng thời có cơ chế giám sát và trách nhiệm giải trình giữa các cơ quan',
+    explanation: 'Ba nhánh quyền lực có chức năng riêng, phối hợp nhưng kiểm soát lẫn nhau, bảo đảm không quyền lực nào bị tuyệt đối hóa.'
   },
   {
     id: 'hcm_q8',
-    question: 'Quan hệ giữa "phòng" và "chống" tham nhũng được xác định như thế nào trong phương châm chỉ đạo của Đảng và Nhà nước?',
+    question: 'Tình huống nào dưới đây thể hiện đúng yêu cầu: pháp luật vừa là công cụ quản lý xã hội, vừa là công cụ để nhân dân làm chủ, kiểm tra, giám sát quyền lực?',
     options: [
-      'Chống là nhiệm vụ cấp bách hàng đầu',
-      'Phòng và chống là hai mặt song song ngang hàng',
-      'Lấy phòng ngừa là chính',
-      'Ưu tiên thu hồi tài sản hơn là xử lý hình sự'
+      'Ban hành quy định nội bộ, không công khai để dễ điều hành',
+      'Công khai quy trình - tiêu chuẩn - thời hạn giải quyết; có kênh tiếp nhận phản ánh; người dân có quyền yêu cầu giải trình và khiếu nại theo luật',
+      'Khuyến khích giải quyết bằng “linh hoạt tình cảm” thay vì quy định',
+      'Chỉ cần tuyên truyền đạo đức, không cần cơ chế pháp lý'
     ],
-    correctAnswer: 'Lấy phòng ngừa là chính',
-    explanation: 'Phương châm là lấy phòng ngừa là chính nhưng đấu tranh kiên quyết, không khoan nhượng.'
+    correctAnswer: 'Công khai quy trình - tiêu chuẩn - thời hạn giải quyết; có kênh tiếp nhận phản ánh; người dân có quyền yêu cầu giải trình và khiếu nại theo luật',
+    explanation: 'Pháp luật không chỉ quản lý mà còn trao quyền cho dân giám sát, yêu cầu giải trình và khiếu nại, bảo đảm quyền làm chủ thực chất.'
   },
   {
     id: 'hcm_q9',

@@ -34,17 +34,20 @@ const FlipCard = ({ card, isFlipped, onFlip, cardWidth, cardHeight }) => {
             height: '100%',
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
+            backgroundColor: 'rgba(0, 0, 0, 0.15)',
             borderRadius: '1rem',
-            boxShadow: '0 15px 40px rgba(0, 0, 0, 0.3)',
+            boxShadow: '0 15px 40px rgba(0, 0, 0, 0.6)',
             background: 'transparent',
-            border: '2px solid #fbbf24',
+            border: '2px solid #575757',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '1.5rem'
+            padding: '1.5rem',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
           }}
         >
-          <h4 style={{ fontSize: '1.25rem', fontWeight: '700', lineHeight: '1.5', color: '#fbbf24', textAlign: 'center' }}>
+          <h4 style={{ fontSize: '1.25rem', fontWeight: '700', lineHeight: '1.5', color: '#1f2937', textAlign: 'center' }}>
             {card.title}
           </h4>
         </div>
@@ -59,13 +62,15 @@ const FlipCard = ({ card, isFlipped, onFlip, cardWidth, cardHeight }) => {
             WebkitBackfaceVisibility: 'hidden',
             borderRadius: '1rem',
             boxShadow: '0 15px 40px rgba(0, 0, 0, 0.3)',
-            backgroundColor: 'rgba(255, 255, 255, 0.6)',
+            backgroundColor: 'rgba(253, 230, 138, 0.5)',
             border: '2px solid #d1d5db',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             padding: '1.5rem',
-            transform: 'rotateY(180deg)'
+            transform: 'rotateY(180deg)',
+            backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
           }}
         >
           <p style={{ 
