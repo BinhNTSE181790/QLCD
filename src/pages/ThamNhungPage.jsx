@@ -339,22 +339,8 @@ const ThamNhungPage = () => {
               <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent mb-8" style={{ fontFamily: 'Playfair Display, serif' }}>
                 đe dọa đến sự tồn vong của chế độ?
               </h2>
-              <p className="text-xl text-gray-400 italic">
-                Nhìn lại lời cảnh báo của Chủ tịch Hồ Chí Minh
-              </p>
             </div>
 
-            {/* Quote Card */}
-            <div className="bg-gradient-to-br from-red-900/30 to-orange-900/20 backdrop-blur-sm rounded-3xl p-10 mb-12 border border-red-500/30 hover:border-red-500/60 transition-all duration-300" style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
-              <svg className="w-12 h-12 text-red-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote className="text-2xl md:text-3xl text-white font-serif leading-relaxed mb-6 italic">
-                "Chính những người được giao nhiệm vụ bảo vệ chế độ lại đang trở thành tác nhân phá hoại chế độ từ bên trong. 
-                Đây không còn là chuyện đạo đức cá nhân nữa, mà là vấn đề sự tồn vong của chế độ."
-              </blockquote>
-              <p className="text-yellow-400 font-semibold text-xl">— Đại biểu Quốc hội Dương Trung Quốc</p>
-            </div>
 
             {/* 3 Main Points */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -435,7 +421,7 @@ const ThamNhungPage = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Luận điểm 1
           </h1>
-          <p className="mb-5 text-2xl md:text-3xl text-red-500 font-semibold">.	Tham nhũng là hành động "phản bội" lại bản chất của chế độ          </p>
+          <p className="mb-5 text-2xl md:text-3xl text-red-500 font-semibold">Tham nhũng là hành động "phản bội" lại bản chất của chế độ          </p>
         </div>
 
         {/* Split Screen Container */}
@@ -1576,35 +1562,7 @@ const ThamNhungPage = () => {
             </div>
           </div>
 
-          {/* Final Conclusion */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-orange-500/20 blur-3xl"></div>
-            <div className="relative bg-gradient-to-r from-orange-900/50 via-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-3xl p-12 border-2 border-orange-500/50 text-center">
-              <svg className="w-20 h-20 text-orange-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Vì vậy, cuộc chiến với<br/>
-                <span className="text-orange-400">"Giặc nội xâm"</span> là cuộc chiến <span className="text-red-400">khó khăn nhất</span>
-              </h3>
-              <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
-                Cần sự <span className="text-green-400 font-bold">kiên quyết</span>, 
-                <span className="text-blue-400 font-bold"> minh bạch</span> và 
-                <span className="text-yellow-400 font-bold"> đồng lòng</span> của toàn Đảng, toàn dân
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <div className="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-bold text-lg">
-                  Kiên quyết
-                </div>
-                <div className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-lg">
-                  Minh bạch
-                </div>
-                <div className="inline-block bg-yellow-600 text-white px-6 py-3 rounded-full font-bold text-lg">
-                  Đồng lòng
-                </div>
-              </div>
-            </div>
-          </div>
+       
 
         </div>
       </section>
