@@ -25,9 +25,9 @@ function AppContent() {
 
   // Pages that need red background under navbar (except overview which has full hero)
   const needsRedBg = !isDemo && !isAdmin && !isQuiz && !isOverview && !isThamNhung && !isSoiDay;
-  const bgClass = needsRedBg ? 'bg-gradient-to-r from-red-600 via-red-700 to-red-800' : 'bg-gray-50';
+  const bgClass = needsRedBg ? 'bg-gradient-to-r from-red-600 via-red-700 to-red-800' : '';
 
-  // Overview page doesn't need top padding (hero goes to top)
+  // Override page doesn't need top padding (hero goes to top)
   const needsPadding = !isDemo && !isAdmin && !isOverview && !isThamNhung && !isSoiDay;
 
   return (
