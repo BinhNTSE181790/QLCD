@@ -36,22 +36,42 @@ const HoiDapPage = () => {
     setIsLoading(true);
 
     try {
-      const systemPrompt = `Bạn là một trợ lý AI chuyên về Phòng Chống Tham Nhũng (PCTN) ở Việt Nam. 
+      // Tìm kiếm thông tin liên quan từ knowledge base
+      const searchKeywords = messageText.toLowerCase();
+      const relevantSections = [];
+      
+      // Chỉ lấy phần liên quan dựa trên từ khóa
+      if (searchKeywords.includes('tham nhũng là gì') || searchKeywords.includes('khái niệm')) {
+        relevantSections.push('Tham nhũng là hành vi của người có chức vụ, quyền hạn đã lợi dụng chức vụ, quyền hạn đó vì vụ lợi (Luật PCTN 2018).');
+      }
+      if (searchKeywords.includes('hành vi') || searchKeywords.includes('bao nhiêu')) {
+        relevantSections.push('9 hành vi tham nhũng: Tham ô tài sản, Nhận hối lộ, Lạm dụng chức vụ chiếm đoạt tài sản, Lợi dụng chức vụ vì vụ lợi, Lạm quyền vì vụ lợi, Gây ảnh hưởng để trục lợi, Giả mạo trong công tác, Đưa hối lộ và môi giới hối lộ, Sử dụng trái phép tài sản công.');
+      }
+      if (searchKeywords.includes('hậu quả') || searchKeywords.includes('tác hại')) {
+        relevantSections.push('Hậu quả: Làm suy yếu niềm tin vào Đảng và Nhà nước, gây thiệt hại kinh tế, ảnh hưởng an ninh chính trị, phá hoại đạo đức xã hội.');
+      }
+      if (searchKeywords.includes('sinh viên') || searchKeywords.includes('vai trò')) {
+        relevantSections.push('Sinh viên cần: Nâng cao nhận thức, tuyên truyền PCTN, không tham gia hành vi tham nhũng, giám sát và phản biện xã hội.');
+      }
+      if (searchKeywords.includes('văn hóa') || searchKeywords.includes('liêm chính')) {
+        relevantSections.push('Văn hóa liêm chính là hệ giá trị đạo đức, chuẩn mực ứng xử trung thực, minh bạch trong hoạt động công vụ.');
+      }
 
-QUAN TRỌNG - QUY TẮC BẮT BUỘC:
-1. Bạn CHỈ được trả lời các câu hỏi liên quan đến chủ đề Phòng Chống Tham Nhũng ở Việt Nam
-2. Nếu câu hỏi KHÔNG liên quan đến PCTN, hãy lịch sự từ chối và hướng dẫn người dùng hỏi về PCTN
-3. Sử dụng kiến thức từ tài liệu được cung cấp bên dưới để trả lời
-4. Trả lời bằng tiếng Việt, ngắn gọn, dễ hiểu
-5. Có thể sử dụng markdown để format câu trả lời
-6. Nếu không tìm thấy thông tin trong tài liệu, hãy nói rõ và đưa ra kiến thức chung về PCTN
+      const contextText = relevantSections.length > 0 
+        ? `\n\nTHÔNG TIN THAM KHẢO:\n${relevantSections.join('\n\n')}`
+        : '\n\nSử dụng kiến thức chung về PCTN ở Việt Nam để trả lời.';
 
-TÀI LIỆU THAM KHẢO:
-${pctnKnowledge}
+      const systemPrompt = `Bạn là trợ lý AI chuyên về Phòng Chống Tham Nhũng (PCTN) ở Việt Nam.
 
-Câu hỏi của người dùng: ${messageText}`;
+QUY TẮC:
+- CHỈ trả lời câu hỏi về PCTN ở Việt Nam
+- Trả lời ngắn gọn, dễ hiểu (tối đa 200 từ)
+- Sử dụng markdown để format
+- Nếu câu hỏi không liên quan PCTN, lịch sự từ chối${contextText}
 
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`, {
+Câu hỏi: ${messageText}`;
+
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +84,7 @@ Câu hỏi của người dùng: ${messageText}`;
           }],
           generationConfig: {
             temperature: 0.7,
-            maxOutputTokens: 1024,
+            maxOutputTokens: 512,
           }
         })
       });
@@ -72,7 +92,15 @@ Câu hỏi của người dùng: ${messageText}`;
       const data = await response.json();
       
       if (data.error) {
-        throw new Error(data.error.message || 'Lỗi API');
+        let errorMessage = 'Lỗi API';
+        if (data.error.message?.includes('quota')) {
+          errorMessage = '⚠️ API đã hết quota miễn phí. Vui lòng thử lại sau hoặc nâng cấp API key.';
+        } else if (data.error.message?.includes('API key')) {
+          errorMessage = '🔑 API key không hợp lệ. Vui lòng kiểm tra lại file .env';
+        } else {
+          errorMessage = data.error.message;
+        }
+        throw new Error(errorMessage);
       }
 
       const assistantMessage = {
@@ -83,9 +111,18 @@ Câu hỏi của người dùng: ${messageText}`;
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error:', error);
+      let errorMsg = error.message;
+      
+      // Xử lý các lỗi phổ biến
+      if (error.message.includes('Failed to fetch')) {
+        errorMsg = '🌐 Không thể kết nối với Gemini API. Kiểm tra kết nối internet.';
+      } else if (error.message.includes('429')) {
+        errorMsg = '⏰ Đã gửi quá nhiều request. Vui lòng đợi 1 phút rồi thử lại.';
+      }
+      
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: `Xin lỗi, đã có lỗi xảy ra: ${error.message}. Vui lòng kiểm tra API key và thử lại.`
+        content: `❌ ${errorMsg}\n\n💡 **Mẹo**: Hãy hỏi câu ngắn gọn hơn để tiết kiệm token!`
       }]);
     } finally {
       setIsLoading(false);
