@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const OverviewPage = () => {
   const [typewriterText, setTypewriterText] = useState('');
   const [showQuestion, setShowQuestion] = useState(false);
-  const fullText = '❝ Tham nhũng là từ trong Đảng mà ra… ❞';
+  const fullText = '❝... Tham nhũng là từ trong Đảng mà ra… ❞';
   const author = '— ĐBQH Dương Trung Quốc';
   const navigate = useNavigate();
 
