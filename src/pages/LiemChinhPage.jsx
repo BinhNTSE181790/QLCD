@@ -13,33 +13,38 @@ const LiemChinhPage = () => {
   const aiTools = [
     {
       name: 'GitHub Copilot (Claude)',
-      purpose: 'Hỗ trợ viết code và phát triển giao diện',
+      purpose: 'Hỗ trợ viết code và phát triển giao diện tương tác',
       prompts: [
         {
-          prompt: 'Tạo trang Tổng quan về Phòng Chống Tham Nhũng với vertical timeline, thống kê qua từng thời kỳ, trích dẫn và số liệu có nguồn rõ ràng',
-          output: 'Gợi ý cấu trúc component React cơ bản với timeline và cards',
-          edits: 'Nhóm tự thiết kế lại toàn bộ UI/UX, nghiên cứu và thu thập số liệu từ nguồn chính thống, viết nội dung, thêm sourceUrl và xác minh từng nguồn trích dẫn'
+          prompt: 'Tạo trang về tư tưởng Hồ Chí Minh về xây dựng Đảng trong sạch, vững mạnh với cấu trúc phân rõ các phần: Đảng, Nhà nước, vận dụng, có nguồn trích dẫn từ giáo trình',
+          output: 'Gợi ý cấu trúc component React với tab navigation và layout cơ bản',
+          edits: 'Nhóm tự nghiên cứu giáo trình Tư tưởng Hồ Chí Minh (tr.80-83, 90-91), trích dẫn chính xác các quan điểm, thiết kế UI/UX theo theme đỏ-vàng phù hợp chủ đề, bổ sung đầy đủ nguồn tài liệu'
         },
         {
-          prompt: 'Thêm navbar với các menu items',
-          output: 'Gợi ý cấu trúc navbar cơ bản',
-          edits: 'Nhóm tự thiết kế glassmorphism effect, điều chỉnh màu sắc theo theme đỏ-vàng, thêm responsive và scroll effect'
+          prompt: 'Tạo component thẻ lật (flip card) để hiển thị nội dung về chỉnh đốn Đảng, mỗi thẻ có 2 mặt',
+          output: 'Gợi ý cấu trúc component flip card với animation CSS cơ bản',
+          edits: 'Nhóm tự thiết kế flow tương tác: thẻ xuất hiện dần sau khi lật, điều chỉnh animation, màu sắc, viết toàn bộ nội dung về chỉnh đốn Đảng, kiểm soát quyền lực dựa trên tư tưởng Hồ Chí Minh'
         },
         {
-          prompt: 'Tạo phần nguồn trích dẫn có thể click',
-          output: 'Gợi ý cách tạo link với icon',
-          edits: 'Nhóm tự tìm kiếm, xác minh và cập nhật URL nguồn chính xác từ các trang web chính phủ'
+          prompt: 'Tạo phần phân tích tỷ lệ đóng góp AI vs con người với progress bar',
+          output: 'Gợi ý component progress bar hai màu cơ bản',
+          edits: 'Nhóm tự đánh giá chi tiết tỷ lệ đóng góp trong từng khía cạnh (thiết kế: 40% AI - 60% người, nội dung: 25% AI - 75% người), viết mô tả cụ thể cho từng phần'
         }
       ]
     },
     {
-      name: 'Tìm kiếm thông tin (Perplexity)',
-      purpose: 'Hỗ trợ tìm kiếm thông tin ban đầu',
+      name: 'Công cụ tìm kiếm AI (Perplexity)',
+      purpose: 'Hỗ trợ tìm kiếm thông tin và từ khóa ban đầu',
       prompts: [
         {
-          prompt: 'Tìm số liệu thống kê về công tác phòng chống tham nhũng giai đoạn 2012-2024',
-          output: 'Gợi ý các nguồn và từ khóa tìm kiếm',
-          edits: 'Nhóm tự truy cập trực tiếp các trang web chính thống (Ban Nội chính TW, Ủy ban Kiểm tra TW, Thanh tra Chính phủ) để xác minh và lấy số liệu chính xác'
+          prompt: 'Tư tưởng Hồ Chí Minh về xây dựng Đảng trong sạch vững mạnh',
+          output: 'Gợi ý tham khảo giáo trình Tư tưởng Hồ Chí Minh và các tác phẩm của Người',
+          edits: 'Nhóm tự nghiên cứu giáo trình chi tiết, trích dẫn đúng trang sách, phân tích và diễn đạt lại bằng ngôn ngữ phù hợp với sinh viên'
+        },
+        {
+          prompt: 'Tìm hiểu về cơ chế kiểm soát quyền lực nhà nước theo pháp luật Việt Nam',
+          output: 'Gợi ý tra cứu Hiến pháp 2013, Luật PCTN 2018, các nghị quyết của Đảng',
+          edits: 'Nhóm tự truy cập Thư viện Pháp luật, AI Pháp luật, đọc và trích dẫn chính xác các điều luật, nghị quyết liên quan'
         }
       ]
     }
@@ -47,71 +52,65 @@ const LiemChinhPage = () => {
 
   const sourceVerifications = [
     {
-      category: 'Cơ quan Đảng',
+      category: 'Tài liệu học thuật chính thống',
       sources: [
         {
-          name: 'Ban Nội chính Trung ương',
-          url: 'https://noichinh.vn/',
+          name: 'Giáo trình Tư tưởng Hồ Chí Minh',
+          url: 'https://www.nxbctqg.org.vn/',
           verified: true,
-          usedFor: 'Số liệu vụ án tham nhũng, báo cáo tổng kết 10 năm PCTN'
+          usedFor: 'Nguồn chính: Tư tưởng về xây dựng Đảng (tr.80-83), xây dựng Nhà nước (tr.90-91), vận dụng vào thực tiễn'
         },
         {
-          name: 'Ủy ban Kiểm tra Trung ương',
-          url: 'https://ubkttw.vn/',
+          name: 'Tác phẩm Hồ Chí Minh toàn tập',
+          url: 'https://www.nxbctqg.org.vn/',
           verified: true,
-          usedFor: 'Số liệu cán bộ bị kỷ luật, hội nghị tổng kết'
-        },
-        {
-          name: 'Tư liệu Văn kiện Đảng',
-          url: 'https://tulieuvankien.dangcongsan.vn/',
-          verified: true,
-          usedFor: 'Nghị quyết, kết luận của Ban Chấp hành TW'
+          usedFor: 'Trích dẫn các bài viết, bài nói của Chủ tịch Hồ Chí Minh về xây dựng Đảng, Nhà nước, đạo đức cách mạng'
         }
       ]
     },
     {
-      category: 'Cơ quan Nhà nước',
+      category: 'Văn bản pháp luật và cơ quan nhà nước',
       sources: [
         {
-          name: 'Thanh tra Chính phủ',
-          url: 'https://thanhtra.gov.vn/',
+          name: 'Hiến pháp 2013',
+          url: 'https://thuvienphapluat.vn/',
           verified: true,
-          usedFor: 'Số liệu thu hồi tài sản tham nhũng'
+          usedFor: 'Quy định về Nhà nước của dân, do dân, vì dân; quyền lực nhân dân; cơ chế kiểm soát quyền lực'
+        },
+        {
+          name: 'Luật Phòng chống tham nhũng 2018',
+          url: 'https://thuvienphapluat.vn/',
+          verified: true,
+          usedFor: 'Khung pháp lý về PCTN; trách nhiệm của cơ quan, tổ chức, cá nhân; cơ chế phòng ngừa và xử lý tham nhũng'
+        },
+        {
+          name: 'AI Pháp luật Việt Nam',
+          url: 'https://ai.phapluat.gov.vn/chat',
+          verified: true,
+          usedFor: 'Công cụ hỗ trợ tìm kiếm nhanh văn bản pháp luật, nghị quyết liên quan đến xây dựng Đảng, PCTN, kiểm soát quyền lực'
         },
         {
           name: 'Quốc hội Việt Nam',
           url: 'https://quochoi.vn/',
           verified: true,
-          usedFor: 'Luật Phòng chống tham nhũng 2005, 2018'
-        },
-        {
-          name: 'Thư viện Pháp luật',
-          url: 'https://thuvienphapluat.vn/',
-          verified: true,
-          usedFor: 'Tìm kiếm văn bản luật liên quan đến PCTN'
-        },
-        {
-          name: 'AI pháp luật',
-          url: 'https://ai.phapluat.gov.vn/chat',
-          verified: true,
-          usedFor: 'Hỗ trợ tìm kiếm và trích dẫn văn bản pháp luật liên quan đến PCTN'
+          usedFor: 'Hoạt động giám sát của Quốc hội; chất vấn và trả lời chất vấn; vai trò đại diện nhân dân trong kiểm soát quyền lực'
         }
       ]
     },
     {
-      category: 'Nguồn khác',
+      category: 'Nguồn tham khảo bổ sung',
       sources: [
         {
           name: 'NXB Chính trị Quốc gia Sự thật',
           url: 'https://www.nxbctqg.org.vn/',
           verified: true,
-          usedFor: 'Cuốn sách của Tổng Bí thư về PCTN'
+          usedFor: 'Các ấn phẩm về xây dựng Đảng, PCTN, tư tưởng Hồ Chí Minh; sách "Một số vấn đề lý luận và thực tiễn về CNXH và con đường đi lên CNXH ở Việt Nam"'
         },
         {
-          name: 'Báo Quân đội Nhân dân',
-          url: 'https://www.qdnd.vn/',
+          name: 'Tạp chí Cộng sản',
+          url: 'https://www.tapchicongsan.org.vn/',
           verified: true,
-          usedFor: 'Hình ảnh Cố Tổng Bí thư Nguyễn Phú Trọng'
+          usedFor: 'Các bài viết phân tích về xây dựng Đảng, kiểm soát quyền lực, vận dụng tư tưởng Hồ Chí Minh trong giai đoạn hiện nay'
         }
       ]
     }
@@ -119,68 +118,78 @@ const LiemChinhPage = () => {
 
   const creativeApplications = [
     {
-      title: 'Thiết kế giao diện',
-      description: 'Nhóm tự thiết kế layout và style, AI chỉ hỗ trợ cấu trúc code cơ bản',
+      title: 'Nghiên cứu nội dung học thuật',
+      description: 'Nhóm tự nghiên cứu giáo trình và tài liệu, AI chỉ hỗ trợ tìm kiếm từ khóa',
       aiContribution: '40%',
       humanContribution: '60%',
       details: [
-        'Nhóm tự nghiên cứu và thiết kế UI/UX từ đầu',
-        'Nhóm chọn màu sắc, typography, spacing phù hợp với chủ đề PCTN',
-        'Nhóm tự code các hiệu ứng animation và responsive',
-        'AI chỉ gợi ý cấu trúc component cơ bản'
+        'Nhóm tự đọc, nghiên cứu giáo trình Tư tưởng Hồ Chí Minh (tr.80-91)',
+        'Nhóm tự phân tích và hiểu sâu các quan điểm về xây dựng Đảng, Nhà nước',
+        'Nhóm tự trích dẫn 4hính xác từ tài liệu gốc, ghi rõ trang sách',
+        'AI chỉ gợi ý từ khóa và nguồn tham khảo ban đầu',
+        'Nhóm tự liên hệ thực tiễn với tình hình PCTN hiện nay'
       ]
     },
     {
-      title: 'Thu thập và tổng hợp nội dung',
-      description: 'Nhóm tự nghiên cứu, AI chỉ hỗ trợ tìm kiếm từ khóa ban đầu',
+      title: 'Thu thập và xác minh dữ liệu',
+      description: 'Nhóm tự thu thập số liệu từ nguồn chính thống, AI chỉ gợi ý nguồn',
       aiContribution: '25%',
       humanContribution: '75%',
       details: [
-        'Nhóm tự truy cập các trang web chính thống để lấy số liệu',
-        'Nhóm tự đọc và phân tích các văn bản pháp luật',
-        'Nhóm tự viết nội dung bằng ngôn ngữ phù hợp',
-        'Nhóm tự xác minh và thêm nguồn trích dẫn chính xác'
+        'Nhóm tự truy cập các trang web: Ban Nội chính TW, UBKTTW, Thanh tra CP',
+        'Nhóm tự đọc các báo cáo, nghị quyết, văn bản pháp luật',
+        'Nhóm tự lấy số liệu về vụ án tham nhũng, cán bộ bị kỷ luật',
+        'Nhóm tự xác minh tính chính xác và cập nhật của thông tin',
+        'AI chỉ gợi ý các trang web có thể tham khảo'
       ]
     },
     {
-      title: 'Tối ưu trải nghiệm người dùng',
-      description: 'Nhóm quyết định toàn bộ flow và interaction',
-      aiContribution: '30%',
-      humanContribution: '70%',
+      title: 'Thiết kế giao diện tương tác',
+      description: 'Nhóm tự thiết kế UI/UX và hiệu ứng, AI hỗ trợ cấu trúc code',
+      aiContribution: '40%',
+      humanContribution: '60%',
       details: [
-        'Nhóm tự thiết kế flow navigation và user journey',
-        'Nhóm tự quyết định cách trình bày thông tin',
-        'Nhóm tự test và thu thập feedback',
-        'AI chỉ gợi ý một số pattern UX phổ biến'
+        'Nhóm tự thiết kế layout, màu sắc theo theme đỏ-vàng',
+        'Nhóm tự thiết kế flow: thẻ lật xuất hiện dần (flip cards)',
+        'Nhóm tự quyết định cách trình bày nội dung phù hợp với người đọc',
+        'AI gợi ý cấu trúc React component và CSS animation cơ bản',
+        'Nhóm tự điều chỉnh animation, responsive và tối ưu UX'
       ]
     }
   ];
 
   const commitments = [
     {
-      type: 'Cam kết',
+      type: 'Cam kết liêm chính học thuật',
       color: 'red',
       items: [
-        'Sử dụng AI như công cụ hỗ trợ, không thay thế tư duy và sáng tạo của con người',
-        'Minh bạch về việc sử dụng AI trong quá trình phát triển dự án',
-        'Luôn ghi nhận nguồn gốc của thông tin và ý tưởng'
+        'Sử dụng AI như công cụ hỗ trợ kỹ thuật, không thay thế tư duy phản biện và sáng tạo nội dung học thuật',
+        'Tất cả nội dung học thuật đều do nhóm tự nghiên cứu từ giáo trình và tài liệu chính thống',
+        'Minh bạch 100% về việc sử dụng AI: ghi rõ prompt, output và chỉnh sửa',
+        'Không sao chép (copy-paste) nội dung từ bất kỳ nguồn nào mà không trích dẫn',
+        'Luôn ghi rõ nguồn gốc thông tin: tên tài liệu, tác giả, trang sách, URL'
       ]
     },
     {
-      type: 'Đảm bảo',
+      type: 'Đảm bảo chất lượng',
       color: 'yellow',
       items: [
-        'Mọi số liệu thống kê đều được xác minh từ nguồn chính thống',
-        'Các trích dẫn đều có nguồn gốc rõ ràng và có thể kiểm chứng',
-        'Nội dung được biên tập và kiểm duyệt bởi thành viên nhóm'
+        'Mọi trích dẫn về tư tưởng Hồ Chí Minh đều từ giáo trình chính thống (tr.80-91)',
+        'Số liệu về tham nhũng được lấy từ Ban Nội chính TW, UBKTTW, Thanh tra CP',
+        'Các phân tích và vận dụng đều dựa trên nền tảng lý luận vững chắc',
+        'Nội dung được thảo luận, kiểm tra chéo giữa các thành viên nhóm',
+        'Đảm bảo tính chính xác, khoa học và phù hợp với định hướng của Đảng và Nhà nước'
       ]
     },
     {
-      type: 'Tuân thủ',
+      type: 'Tuân thủ nguyên tắc',
       color: 'green',
       items: [
-        'Các nguyên tắc đạo đức trong nghiên cứu học thuật.',
-        'Minh bạch trong việc sử dụng công nghệ AI.'
+        'Tuân thủ quy định về đạo đức nghiên cứu khoa học của Bộ GD&ĐT',
+        'Tuân thủ quy định về liêm chính học thuật của trường Đại học',
+        'Minh bạch về tỷ lệ đóng góp của AI và con người trong từng khâu',
+        'Sẵn sàng cung cấp đầy đủ tài liệu, nguồn tham khảo khi được yêu cầu',
+        'Chịu trách nhiệm hoàn toàn về tính chính xác của nội dung trình bày'
       ]
     }
   ];
